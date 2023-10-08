@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/blue-mode.css">
+</head>
+<body>
+    <h1 class="header">Hola, Disfruta de esta calculadora.</h1>
+    <div class="calculator-container">
+        <label for="calculatorType" class="calculator-container__label descriptive-label">Selecciona el tipo de calculadora:</label>
+        <select id="calculatorType" name="calculatorType" class="calculator-container__select">
+            <option value="binary" class="calculator-container__option">Binaria</option>
+            <option value="octal" class="calculator-container__option">Octal</option>
+            <option value="decimal" class="calculator-container__option">Decimal</option>
+            <option value="hexadecimal" class="calculator-container__option">Hexadecimal</option>
+        </select>
+    </div>
+    <div class="main-container">
+        <p class="main-container__alert">Esta calculadora no está diseñada para realizar operaciones con punto decimal</p>
+        <form id="calculator" class="main-container__form">
+            <div class="data-input">
+                <div class="data-input__left">
+                    <label for="num1" class="data-input__label descriptive-label">Número 1:</label>
+                    <input type="text" class="data-input__input data-input__input--num1" id="num1" name="num1" required autocomplete="off" placeholder="Escribe aqui el primer numero">
+                    <input type="button" value="Copy" class="data-input__btn data-input__btn--copy" onclick="copyInputText('num1')">
+                </div>
+                <div class="data-input__right">
+                    <label for="num2" class="data-input__label descriptive-label">Número 2:</label>
+                    <input type="text" class="data-input__input data-input__input--num2" id="num2" name="num2" required autocomplete="off" placeholder="Escribe aqui el segundo numero">
+                    <input type="button" value="Copy" class="data-input__btn data-input__btn--copy" onclick="copyInputText('num2')">
+                </div>
+            </div>
+            
+            <div class="operation-buttons">
+                <button type="button" class="operation-buttons__button operation-buttons__button--add" id="add">Suma (+)</button>
+                <button type="button" class="operation-buttons__button operation-buttons__button--subtract" id="subtract">Resta (-)</button>
+                <button type="button" class="operation-buttons__button operation-buttons__button--multiply" id="multiply">Multiplicación (*)</button>
+                <button type="button" class="operation-buttons__button operation-buttons__button--divide" id="divide">División (/)</button>
+            </div>
+            
+            <div id="result" class="result-container">
+                <div class="result-container__bin">
+                    <label for="bin" class="result-container__label descriptive-label">BINARIO:</label>
+                    <input type="text" class="result-container__text result-container__text--bin" readonly="off" id="bin-input" placeholder="Resultado Binario">
+                    <input type="button" value="Copy" class="result-container__btn result-container__btn--copy" onclick="copyInputText('bin-input')">
+                </div>
+                <div class="result-container__oct">
+                    <label for="oct" class="result-container__label descriptive-label">OCTAL</label>
+                    <input type="text" class="result-container__text result-container__text--oct" readonly="off" id="oct-input" placeholder="Resultado Octal">
+                    <input type="button" value="Copy" class="result-container__btn result-container__btn--copy" onclick="copyInputText('oct-input')">
+                </div>
+                <div class="result-container__dec">
+                    <label for="dec" class="result-container__label descriptive-label">DECIMAL</label>
+                    <input type="text" class="result-container__text result-container__text--dec" readonly="off" id="dec-input" placeholder="Resultado Decimal">
+                    <input type="button" value="Copy" class="result-container__btn result-container__btn--copy" onclick="copyInputText('dec-input')">
+                </div>
+                <div class="result-container__hex">
+                    <label for="hex-input" class="result-container__label descriptive-label">HEXADECIMAL</label>
+                    <input type="text" class="result-container__text result-container__text--hex" readonly="off" id="hex-input" placeholder="Resultado Hexadecimal">
+                    <input type="button" value="Copy" class="result-container__btn result-container__btn--copy" onclick="copyInputText('hex-input')">
+                </div>
+                <p id="message" class="result-container__message"></p>
+            </div>
+        </form>
+
+    </div>
+
+    <div id="popup-container" class="popup">
+        <div id="popup-content" class="popup__content"></div>
+    </div>
+
+    <div class="color-selector">
+        <label for="palette-select" class="color-selector__label descriptive-label">Color mode</label>
+        <select id="palette-select" class="color-selector__select"></select>
+    </div>
+
+    <script src="./JS/index.js" type="text/javascript"></script>
+    <script src="./JS/palettes.js" type="text/javascript"></script>
+
+</body>
+</html>

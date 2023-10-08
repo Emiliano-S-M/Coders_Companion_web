@@ -1,0 +1,123 @@
+
+ :root{
+  --Primary-color: #151515; 
+  --Secondary-color: #A9A9A9; 
+  --Tertiary-color: #4D4D4D;
+  --Accent-color: #c1c1c1;
+  --Alert-color: #CA0000;
+}
+
+body {
+  background: var(--Primary-color);
+}
+
+.header {
+  color: var(--Secondary-color);
+  border-bottom: 1px solid var(--Tertiary-color);
+  text-shadow: 1px 1px 15px var(--Secondary-color);
+}
+
+.calculator-container__label {
+  color: var(--Secondary-color);
+  border-bottom: 1px solid var(--Accent-color);
+}
+
+.calculator-container__select {
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right 0.8em center/1.4em, var(--Accent-color);
+  color: var(--Tertiary-color);
+}
+
+.calculator-container__option {
+  background: var(--Accent-color);
+  color: var(--Tertiary-color);
+}
+
+.main-container {
+  border: 1px solid var(--Tertiary-color);
+  box-shadow: 0px 0px 3px var(--Secondary-color);
+}
+
+.main-container__alert {
+  color: var(--Alert-color);
+  border-bottom: 1px solid var(--Secondary-color);
+  border-top: 1px solid var(--Secondary-color);
+}
+
+.data-input__label {
+  color: var(--Secondary-color);
+}
+
+.data-input__input {
+  background: var(--Secondary-color);
+  color: var(--Primary-color);
+}
+
+.data-input__input::placeholder {
+  color: var(--Tertiary-color);
+}
+
+.data-input__input:focus {
+  background: var(--Accent-color);
+  color: var(--Tertiary-color);
+}
+
+.data-input__btn--copy, .operation-buttons__button {
+  border-bottom: 1px solid var(--Primary-color);
+  background: var(--Accent-color);
+  color: var(--Tertiary-color);
+}
+
+.data-input__btn--copy:hover, .operation-buttons__button:hover {
+  background: var(--Tertiary-color);
+  color: var(--Secondary-color);
+}
+
+.operation-buttons__button:hover {
+  background: var(--Tertiary-color);
+  color: var(--Secondary-color);
+}
+
+.result-container__label {
+  color: var(--Secondary-color);
+}
+
+.result-container__text {
+  background: var(--Secondary-color);
+}
+
+.result-container__text::placeholder {
+  color: var(--Tertiary-color);
+}
+
+.result-container__btn--copy {
+  border-bottom: 1px solid var(--Primary-color);
+  background: var(--Accent-color);
+  color: var(--Tertiary-color);
+}
+
+.result-container__btn--copy:hover {
+  background: var(--Tertiary-color);
+  color: var(--Secondary-color);
+}
+
+.result-container__message {
+  color: var(--Secondary-color);
+}
+
+.popup {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup__content {
+  background-color: white;
+  box-shadow: 0px 0px 20px rgb(0, 155, 255);
+}
+
+.color-selector__label{
+  color: var(--Secondary-color);
+}
+
+.color-selector__select{
+  background: url(https://upload.wikimedia.org/wikipedia/commons/9/9d/Caret_down_font_awesome_whitevariation.svg) no-repeat right, var(--Accent-color);
+  color: var(--Tertiary-color);
+}
