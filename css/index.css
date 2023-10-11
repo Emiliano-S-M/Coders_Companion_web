@@ -1,5 +1,7 @@
+/* Importación de la fuente "Rajdhani" desde Google Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Rajdhani&display=swap");
 
+/* Estilos globales para el reset de márgenes y fuentes */
 * {
   margin: 0;
   padding: 0;
@@ -8,38 +10,35 @@
   font-weight: 600;
 }
 
+/* Estilo global para convertir el texto del cuerpo del documento en mayúsculas */
 body {
   text-transform: uppercase;
 }
 
+/* Estilos para el encabezado */
 .header {
   width: 100%;
   text-align: center;
   font-size: 28px;
-  padding: 8px 0px 8px 0px;
+  padding: 8px 0;
 }
 
-.calculator-container__label {
+/* Estilos para la etiqueta de selección y el select del tipo de calculadora */
+.calculator-container__label, .calculator-container__select {
   width: 100%;
   display: block;
   font-size: 20px;
   margin-bottom: 1.5%;
   text-align: center;
-  padding: 3px 0px 3px 0px;
+  padding: 3px 0;
 }
-.calculator-container__select {
-  appearance: none;
-  border: 0;
-  outline: 0;
-  width: 100%;
-  text-align: center;
-  padding: 1%;
-  font-size: 16px;
-}
+
+/* Estilos específicos para el select del tipo de calculadora en estado de enfoque */
 .calculator-container__select:focus {
   outline: none;
 }
 
+/* Estilos para el contenedor principal de la calculadora */
 .main-container {
   width: 60%;
   display: block;
@@ -47,62 +46,75 @@ body {
   margin-top: 1.5%;
   padding: 1.5%;
   border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
 }
+
+/* Estilos para el mensaje de alerta en el contenedor principal */
 .main-container__alert {
   font-size: 12px;
   width: 100%;
   text-align: center;
-  padding: 1% 0 1% 0;
+  padding: 1% 0;
   margin-bottom: 1%;
 }
+
+/* Estilos para el formulario en el contenedor principal */
 .main-container__form {
   width: 100%;
 }
-.data-input__left,.data-input__right {
+
+/* Estilos para los contenedores de entrada de datos izquierdo y derecho */
+.data-input__left, .data-input__right {
   display: flex;
   flex-direction: row;
 }
-.data-input__label, .result-container__label {
+
+/* Estilos para etiquetas y campos de entrada de datos y resultados */
+.data-input__label, .result-container__label, .operation-buttons__button {
   width: 20%;
   font-size: 18px;
 }
-.data-input__input, .result-container__text{
+
+.data-input__input, .result-container__text, .operation-buttons__button {
   width: 70%;
   outline: none;
   font-size: 18px;
 }
 
-.data-input__btn--copy,  .result-container__btn--copy{
+/* Estilos para botones de copiar en campos de entrada y resultados */
+.data-input__btn--copy, .result-container__btn--copy {
   width: 10%;
   font-size: 18px;
 }
 
+/* Estilos para los botones de operación */
 .operation-buttons {
   margin-top: 1%;
   margin-bottom: 1%;
   display: flex;
   justify-content: space-between;
 }
+
 .operation-buttons__button {
   width: 20%;
   height: 2%;
-  font-size: 18px;
+  font-size: 28px;
   outline: none;
   box-shadow: none;
   border: none;
 }
+
+/* Estilos para los contenedores de resultados en diferentes sistemas numéricos */
 .result-container__bin, .result-container__oct, .result-container__dec, .result-container__hex {
   display: flex;
   flex-direction: row;
 }
+
+/* Estilos para mensajes dentro del contenedor de resultados */
 .result-container__message {
   font-size: 18px;
 }
 
+/* Estilos para la ventana emergente */
 .popup {
   display: none;
   position: fixed;
@@ -116,6 +128,7 @@ body {
   backdrop-filter: blur(2px);
 }
 
+/* Estilos para el contenido de la ventana emergente */
 .popup__content {
   position: absolute;
   top: 50%;
@@ -135,7 +148,8 @@ body {
   -o-transform: translate(-50%, -50%);
 }
 
-.color-selector{
+/* Estilos para el selector de colores */
+.color-selector {
   position: fixed;
   top: 0;
   left: 0;
@@ -146,11 +160,15 @@ body {
   display: grid;
   grid-template-rows: 1fr auto;
 }
-.color-selector__label{
+
+/* Estilos para la etiqueta del selector de colores */
+.color-selector__label {
   text-align: center;
   font-size: 18px;
 }
-.color-selector__select{
+
+/* Estilos para el select del selector de colores en estado de enfoque */
+.color-selector__select {
   appearance: none;
   border: 0;
   outline: 0;
@@ -158,4 +176,3 @@ body {
   text-align: center;
   font-size: 16px;
 }
-
